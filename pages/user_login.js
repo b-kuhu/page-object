@@ -1,7 +1,7 @@
 const { I } = inject();
 
 module.exports = {
-   
+  locators:{
     Email:"#email_create",
     submit:"#SubmitCreate",
     title:"#id_gender2",
@@ -22,30 +22,32 @@ module.exports = {
     phone:"#phone_mobile",
     alias:"#alias",
     register:"#submitAccount",
+  },
+    
 
   
      createUser(Email,fname,lname,password,date,month,year,address_fname,address_lname,company,address1,address2,city,state,pincode,alias){
-      I.fillField(this.Email,Email);
-      I.click(this.submit);
+      I.fillField(this.locators.Email,Email);
+      I.click(this.locators.submit);
       I.waitForNavigation();
       I.see('CREATE AN ACCOUNT');
-      I.click(this.title);
-      I.fillField(this.fname,fname);
-      I.fillField(this.lname,lname);
-      I.fillField(this.password,password);
-      I.selectOption(this.date,date);
-      I.selectOption(this.month,month);
-      I.selectOption(this.year,year);
-      I.fillField(this.address_fname,address_fname);
-      I.fillField(this.address_lname,address_lname);
-      I.fillField(this.company,company);
-      I.fillField(this.address1,address1);
-      I.fillField(this.address2,address2);
-      I.fillField(this.city,city);
-      I.selectOption(this.state,state);
-      I.fillField(this.pincode,pincode);
-      I.fillField(this.alias,alias);
-      I.click(this.register);
+      I.click(this.locators.title);
+      I.fillField(this.locators.fname,fname);
+      I.fillField(this.locators.lname,lname);
+      I.fillField(this.locators.password,password);
+      I.selectOption(this.locators.date,date);
+      I.selectOption(this.locators.month,month);
+      I.selectOption(this.locators.year,year);
+      I.fillField(this.locators.address_fname,address_fname);
+      I.fillField(this.locators.address_lname,address_lname);
+      I.fillField(this.locators.company,company);
+      I.fillField(this.locators.address1,address1);
+      I.fillField(this.locators.address2,address2);
+      I.fillField(this.locators.city,city);
+      I.selectOption(this.locators.state,state);
+      I.fillField(this.locators.pincode,pincode);
+      I.fillField(this.locators.alias,alias);
+      I.click(this.locators.register);
 
     }
 }
