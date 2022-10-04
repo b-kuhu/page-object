@@ -1,5 +1,4 @@
 Feature('login test');
-
 Scenario('user login ', ({I,user_loginPage}) => {
   I.amOnPage('/');
   user_loginPage.createUser('kuhu@gmail.com','Kuhu','Bhatnagar','12345','28',

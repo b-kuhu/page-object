@@ -1,7 +1,7 @@
 const { I } = inject();
 
 module.exports = {
-
+   
     Email:"#email_create",
     submit:"#SubmitCreate",
     title:"#id_gender2",
